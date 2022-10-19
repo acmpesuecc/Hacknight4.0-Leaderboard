@@ -108,7 +108,7 @@ const Scores = (props) => {
               return (
                 <tr key={score.contributor}>
                   <td> 
-                    <img src= 'https://github.com/acmpesuecc.png' width="50"/>
+                    <img src={"https://github.com/" + score.contributor + ".png"} width="50"/>
                   </td>
                   <td> {index + 1} </td>
                   <td> {score.contributor} </td>
