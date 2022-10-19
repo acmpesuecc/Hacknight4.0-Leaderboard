@@ -1,4 +1,4 @@
-# Hacknight 3.0 Leaderboard
+# Hacknight 4.0 Leaderboard
 
 > UPDATE: The Leaderboard will accept a maximum of one pull request on the same issue, and one person being assigned to each issue. Contributors will be de-assigned if they do not submit a PR within 30 minutes.
 

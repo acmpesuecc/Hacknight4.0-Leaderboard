@@ -1,0 +1,15 @@
+.table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.toggleSort {
+  float: right;
+}
+
+td {
+  backdrop-filter: blur(2.5px);
+}
+td:hover {
+  background-color: blue; 
+}
