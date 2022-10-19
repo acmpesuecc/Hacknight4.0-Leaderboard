@@ -18,7 +18,7 @@ const get_leaderboard_data = () => {
   */
     return new Promise ((resolve, reject) => {
         axios
-            .get(' https://mocki.io/v1/1a4db56a-2d3b-4aed-bc1e-8d01f6bd04f3 ') //THIS IS A DUMMY API, IT MAY EXPIRE AND CAUSE THE PAGE TO NOT RENDER. Use mocki.io or whatever to make a new one!
+            .get(' https://mocki.io/v1/4ddc2d94-1d91-46ef-8e1b-2d1fa5b6de11  ') //THIS IS A DUMMY API, IT MAY EXPIRE AND CAUSE THE PAGE TO NOT RENDER. Use mocki.io or whatever to make a new one!
             .then(response => {
                 resolve(response.data);
                 console.log("API call made!")
