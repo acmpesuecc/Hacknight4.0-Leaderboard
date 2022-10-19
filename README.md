@@ -2,6 +2,9 @@
 "Wee woo wee woo"
 -Navin
 
+"Whatsapp is async"
+-Roji
+
 > UPDATE: The Leaderboard will accept a maximum of one pull request on the same issue, and one person being assigned to each issue. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
