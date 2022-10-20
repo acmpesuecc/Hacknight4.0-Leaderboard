@@ -1,9 +1,4 @@
 # Hacknight 4.0 Leaderboard
-"Wee woo wee woo"
--Navin
-
-"Whatsapp is async"
--Roji
 
 > UPDATE: The Leaderboard will accept a maximum of one pull request on the same issue, and one person being assigned to each issue. 
 
