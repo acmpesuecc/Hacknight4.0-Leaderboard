@@ -18,9 +18,9 @@ const get_leaderboard_data = () => {
   */
     return new Promise ((resolve, reject) => {
         axios
-            // .get(' https://mocki.io/v1/1a4db56a-2d3b-4aed-bc1e-8d01f6bd04f3 ') //THIS IS A DUMMY API, IT MAY EXPIRE AND CAUSE THE PAGE TO NOT RENDER. Use mocki.io or whatever to make a new one!
-            // .get('https://bunsamosa.savaal.xyz/lb_all')
-            .get(' https://mocki.io/v1/fb3dd4b1-5a48-4920-bc84-e53c036dbb4b  ')
+            // .get(' ') //THIS IS A DUMMY API, IT MAY EXPIRE AND CAUSE THE PAGE TO NOT RENDER. Use mocki.io or whatever to make a new one!
+            .get('https://bunsamosa.savaal.xyz/lb_all')
+            // .get(' https://mocki.io/v1/fb3dd4b1-5a48-4920-bc84-e53c036dbb4b  ')
             .then(response => {
                 resolve(response.data);
                 console.log("API call made!")
@@ -34,7 +34,7 @@ const get_leaderboard_data = () => {
   // });
 };
 
-setInterval(get_leaderboard_data, 5500)
+setInterval(get_leaderboard_data, 60000) // Update leaderboard every minute
 
 const Scores = (props) => {
   const [scores, setScores] = useState();
@@ -49,7 +49,8 @@ const Scores = (props) => {
           if (!player_score_object.hasOwnProperty(score.Contributor_name)) {
             player_score_object[score.Contributor_name] = 0;
           }
-          var clean_score = parseInt(score.Points_alloted);
+          var clean_score = parseInt(score.Points_allotted);
+            console.log(score.Points_allotted)
           player_score_object[score.Contributor_name] += clean_score;
           return null; 
         });
@@ -71,7 +72,7 @@ const Scores = (props) => {
       .catch((err) => {
         console.error(err);
       });
-  }, []);
+  }, [scores]);
 
   const sortArray = () => {
     let sortedArr = [...scores];
