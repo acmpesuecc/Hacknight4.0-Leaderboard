@@ -95,7 +95,7 @@ const get_leaderboard_data = () => {
   };
 
   return (
-    <>
+    <div className="outerContainer">
       <div className="btn">
       <a href="https://www.notion.so/289997d430e041ac9ea58a6b86ee3806?v=c5fc66b06c8946c4b36a401d7f03692f" target="_blank" rel = "noreferrer">
       <button className="conBtn" >CONTRIBUTORS BIBLE</button>
@@ -131,7 +131,7 @@ const get_leaderboard_data = () => {
             })}
         </tbody>
       </table>
-    </>
+    </div>
   );
 };
 
