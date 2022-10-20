@@ -34,11 +34,13 @@ const get_leaderboard_data = () => {
   // });
 };
 
-setInterval(get_leaderboard_data, 60000) // Update leaderboard every minute
 
-const Scores = (props) => {
-  const [scores, setScores] = useState();
-  const [isSortAsc, setIsSortAsc] = useState(true);
+    const Scores = (props) => {
+
+    const [scores, setScores] = useState();
+    const [isSortAsc, setIsSortAsc] = useState(true);
+    const [toggler, setToggler] = useState(true); 
+    // setInterval(()=> setToggler(!toggler), 30000) // Update leaderboard every minute
 
   useEffect(() => {
     get_leaderboard_data()
@@ -72,7 +74,8 @@ const Scores = (props) => {
       .catch((err) => {
         console.error(err);
       });
-  }, [scores]);
+  }, [toggler]);
+
 
   const sortArray = () => {
     let sortedArr = [...scores];
