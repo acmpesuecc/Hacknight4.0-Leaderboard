@@ -18,7 +18,7 @@ const get_leaderboard_data = () => {
   */
     return new Promise ((resolve, reject) => {
         axios
-            .get(' https://mocki.io/v1/4ddc2d94-1d91-46ef-8e1b-2d1fa5b6de11  ') //THIS IS A DUMMY API, IT MAY EXPIRE AND CAUSE THE PAGE TO NOT RENDER. Use mocki.io or whatever to make a new one!
+            .get(' https://mocki.io/v1/1a4db56a-2d3b-4aed-bc1e-8d01f6bd04f3 ') //THIS IS A DUMMY API, IT MAY EXPIRE AND CAUSE THE PAGE TO NOT RENDER. Use mocki.io or whatever to make a new one!
             .then(response => {
                 resolve(response.data);
                 console.log("API call made!")
@@ -90,13 +90,18 @@ const Scores = (props) => {
 
   return (
     <>
+      <div className="btn">
+      <a href="https://www.notion.so/289997d430e041ac9ea58a6b86ee3806?v=c5fc66b06c8946c4b36a401d7f03692f" target="_blank" rel = "noreferrer">
+      <button className="conBtn" >CONTRIBUTORS BIBLE</button>
+      </a>
       <button className="toggleSort" onClick={sortArray}>
         Toggle sort &#8593; &#8595;
       </button>
-      <table align="center">
+      </div>
+      <table align="center" className="steelBlueCols">
         <thead>
           <tr>
-            <th></th>
+            <th>  </th>
             <th> Position </th>
             <th> Contributor </th>
             <th> Bounty </th>
@@ -108,7 +113,7 @@ const Scores = (props) => {
               return (
                 <tr key={score.contributor}>
                   <td> 
-                    <img src={"https://github.com/" + score.contributor + ".png"} width="50"/>
+                    <img src= 'https://github.com/acmpesuecc.png' width="50"/>
                   </td>
                   <td> {index + 1} </td>
                   <td> {score.contributor} </td>
