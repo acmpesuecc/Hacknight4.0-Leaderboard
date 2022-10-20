@@ -7,6 +7,47 @@
   float: right;
 }
 
-td {
-  backdrop-filter: blur(2.5px);
+
+table.steelBlueCols {
+  font-family: Verdana, Geneva, sans-serif;
+  border: 0px solid #1BFDF1;
+  background-color: #170F1E;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.steelBlueCols td, table.steelBlueCols th {
+  border: 0px solid #555555;
+  padding: 5px 7px;
+}
+table.steelBlueCols tbody td {
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFFFFF;
+
+}
+table.steelBlueCols tr:nth-child(even) {
+  background: #321F46;
+}
+table.steelBlueCols thead {
+  background: #321F46;
+}
+table.steelBlueCols thead th {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF; 
+}
+table.steelBlueCols thead th:first-child {
+  border-left: none;
+}
+
+table.steelBlueCols tfoot td {
+  font-size: 13px;
+} 
+table.steelBlueCols tfoot .links a{
+  display: inline-block;
+  background: #FFFFFF;
+  color: #398AA4;
+  padding: 2px 8px;
+  border-radius: 5px;
 }
