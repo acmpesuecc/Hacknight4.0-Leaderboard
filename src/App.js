@@ -1,5 +1,5 @@
 import './App.css';
-import logo from './hacktober2022.png'
+import logo from './banner.png'
 import Scores from './logtable'
 
 function App() {
