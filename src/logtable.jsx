@@ -18,7 +18,9 @@ const get_leaderboard_data = () => {
   */
     return new Promise ((resolve, reject) => {
         axios
-            .get(' https://mocki.io/v1/1a4db56a-2d3b-4aed-bc1e-8d01f6bd04f3 ') //THIS IS A DUMMY API, IT MAY EXPIRE AND CAUSE THE PAGE TO NOT RENDER. Use mocki.io or whatever to make a new one!
+            // .get(' https://mocki.io/v1/1a4db56a-2d3b-4aed-bc1e-8d01f6bd04f3 ') //THIS IS A DUMMY API, IT MAY EXPIRE AND CAUSE THE PAGE TO NOT RENDER. Use mocki.io or whatever to make a new one!
+            // .get('https://bunsamosa.savaal.xyz/lb_all')
+            .get(' https://mocki.io/v1/fb3dd4b1-5a48-4920-bc84-e53c036dbb4b  ')
             .then(response => {
                 resolve(response.data);
                 console.log("API call made!")
@@ -44,11 +46,11 @@ const Scores = (props) => {
         // sanitize the scores
         var player_score_object = {};
         data.map((score) => {
-          if (!player_score_object.hasOwnProperty(score.contributor)) {
-            player_score_object[score.contributor] = 0;
+          if (!player_score_object.hasOwnProperty(score.Contributor_name)) {
+            player_score_object[score.Contributor_name] = 0;
           }
-          var clean_score = parseInt(score.points);
-          player_score_object[score.contributor] += clean_score;
+          var clean_score = parseInt(score.Points_alloted);
+          player_score_object[score.Contributor_name] += clean_score;
           return null; 
         });
 
@@ -56,7 +58,7 @@ const Scores = (props) => {
         var scores_array = [];
         for (var key in player_score_object) {
           scores_array.push({
-            contributor: key,
+            Contributor_name: key,
             score: player_score_object[key],
           });
         }
@@ -113,10 +115,12 @@ const Scores = (props) => {
               return (
                 <tr key={score.contributor}>
                   <td> 
-                    <img src= 'https://github.com/acmpesuecc.png' width="50"/>
+                    <img
+                      src={"https://github.com/" + score.Contributor_name + ".png"}
+                      width="50" />
                   </td>
                   <td> {index + 1} </td>
-                  <td> {score.contributor} </td>
+                  <td> {score.Contributor_name} </td>
                   <td> {score.score} </td>
                 </tr>
               );
@@ -126,4 +130,6 @@ const Scores = (props) => {
     </>
   );
 };
+
+
 export default Scores;
