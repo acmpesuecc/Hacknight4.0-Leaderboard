@@ -2,7 +2,11 @@
   text-align: center;
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.1em;
-}
+    background-color:#170F1E;;
+    border: none;
+  
+}    
+
 
 .App-logo {
   height: 40vmin;
