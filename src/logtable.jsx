@@ -97,8 +97,8 @@ const get_leaderboard_data = () => {
   return (
     <div className="outerContainer">
       <div className="btn">
-      <a href="https://www.notion.so/289997d430e041ac9ea58a6b86ee3806?v=c5fc66b06c8946c4b36a401d7f03692f" target="_blank" rel = "noreferrer">
-      <button className="conBtn" >CONTRIBUTORS BIBLE</button>
+      <a href="https://zippy-file-185.notion.site/HackNight-4-0-Contributors-733d658abdf74a67bf01beb903c4f3f2" target="_blank" rel = "noreferrer">
+      <button className="conBtn" >CONTRIBUTORS GUIDELINES</button>
       </a>
       <button className="toggleSort" onClick={sortArray}>
         Toggle sort &#8593; &#8595;
