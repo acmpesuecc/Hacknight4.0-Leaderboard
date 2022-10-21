@@ -31,3 +31,20 @@ code {
   margin-bottom: 5%;
   margin-top: 2%
 }
+
+.dot {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+.dotContainer {
+  display: flex;
+  padding: 20px !important;
+  justify-content: center;
+  align-content: center;
+}
