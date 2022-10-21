@@ -107,8 +107,8 @@ const get_leaderboard_data = () => {
       <table align="center" className="steelBlueCols">
         <thead>
           <tr>
-            <th>  </th>
-            <th> Position </th>
+            <th style={{width: '80px'}}> Position </th>
+            <th style={{width: '80px'}}>  </th>
             <th> Contributor </th>
             <th> Bounty </th>
           </tr>
@@ -117,15 +117,19 @@ const get_leaderboard_data = () => {
           {scores &&
             scores.map((score, index) => {
               return (
-                <tr key={score.contributor}>
+                <tr key={index}>
+                  <td className='dotContainer'>
+                    <div className="dot" style={{ background: ['#C9B037', '#D7D7D7', '#AD8A56'][index] || '#516095'}}>
+                      {index + 1}
+                    </div>
+                  </td>
                   <td> 
                     <img
                       src={"https://github.com/" + score.Contributor_name + ".png"}
-                      width="50" />
+                      width="50" alt='GitHub Profile Pic' />
                   </td>
-                  <td> {index + 1} </td>
-                  <td> {score.Contributor_name} </td>
-                  <td> {score.score} </td>
+                  <td style={{verticalAlign: 'middle'}}> {score.Contributor_name} </td>
+                  <td style={{verticalAlign: 'middle'}}> {score.score} </td>
                 </tr>
               );
             })}
