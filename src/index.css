@@ -19,4 +19,15 @@ code {
 }
 .conBtn{
   float: left;
+  border-style: dashed;
+  border-color: greenyellow;
+  margin-bottom: 5%;
+  margin-top: 2%
+}
+
+.toggleSort{
+  border-style: dashed;
+  border-color: greenyellow;
+  margin-bottom: 5%;
+  margin-top: 2%
 }
