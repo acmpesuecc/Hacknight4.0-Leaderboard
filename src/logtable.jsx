@@ -19,7 +19,7 @@ const get_leaderboard_data = () => {
     return new Promise ((resolve, reject) => {
         axios
             // .get(' ') //THIS IS A DUMMY API, IT MAY EXPIRE AND CAUSE THE PAGE TO NOT RENDER. Use mocki.io or whatever to make a new one!
-            .get('https://bunsamosa.savaal.xyz/lb_all')
+            .get('https://bunsamosa.savaal.xyz/leaderboard')
             // .get(' https://mocki.io/v1/fb3dd4b1-5a48-4920-bc84-e53c036dbb4b  ')
             .then(response => {
                 resolve(response.data);
@@ -34,12 +34,11 @@ const get_leaderboard_data = () => {
   // });
 };
 
-
     const Scores = (props) => {
 
     const [scores, setScores] = useState();
     const [isSortAsc, setIsSortAsc] = useState(true);
-    const [toggler, setToggler] = useState(true); 
+    // const [toggler, setToggler] = useState(true); 
     // setInterval(()=> setToggler(!toggler), 30000) // Update leaderboard every minute
 
   useEffect(() => {
@@ -48,12 +47,14 @@ const get_leaderboard_data = () => {
         // sanitize the scores
         var player_score_object = {};
         data.map((score) => {
-          if (!player_score_object.hasOwnProperty(score.Contributor_name)) {
-            player_score_object[score.Contributor_name] = 0;
+          // console.log(score.Current_bounty)
+          if (!player_score_object.hasOwnProperty(score.Name)) {
+            player_score_object[score.Name] = 0;
           }
-          var clean_score = parseInt(score.Points_allotted);
-            console.log(score.Points_allotted)
-          player_score_object[score.Contributor_name] += clean_score;
+          var clean_score = parseInt(score.Current_bounty);
+            // console.log(score.Current_bounty)
+            // console.log(clean_score)
+          player_score_object[score.Name] += clean_score;
           return null; 
         });
 
@@ -61,21 +62,19 @@ const get_leaderboard_data = () => {
         var scores_array = [];
         for (var key in player_score_object) {
           scores_array.push({
-            Contributor_name: key,
+            Name: key,
             score: player_score_object[key],
           });
         }
 
-        //console.log(scores_array)
+        console.log(scores_array)
         scores_array.sort((first, second) => second.score - first.score);
         setScores(scores_array);
-        //console.log(scores_array)
       })
       .catch((err) => {
         console.error(err);
       });
-  }, [toggler]);
-
+  }, []);
 
   const sortArray = () => {
     let sortedArr = [...scores];
@@ -117,7 +116,7 @@ const get_leaderboard_data = () => {
           {scores &&
             scores.map((score, index) => {
               return (
-                <tr key={index}>
+              <tr key={index}>
                   <td className='dotContainer'>
                     <div className="dot" style={{ background: ['#C9B037', '#D7D7D7', '#AD8A56'][index] || '#516095'}}>
                       {index + 1}
@@ -125,10 +124,10 @@ const get_leaderboard_data = () => {
                   </td>
                   <td> 
                     <img
-                      src={"https://github.com/" + score.Contributor_name + ".png"}
+                      src={"https://github.com/" + score.Name + ".png"}
                       width="50" alt='GitHub Profile Pic' />
                   </td>
-                  <td style={{verticalAlign: 'middle'}}> {score.Contributor_name} </td>
+                  <td style={{verticalAlign: 'middle'}}> {score.Name} </td>
                   <td style={{verticalAlign: 'middle'}}> {score.score} </td>
                 </tr>
               );
