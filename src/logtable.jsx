@@ -122,7 +122,7 @@ const get_leaderboard_data = () => {
                       src={"https://github.com/" + score.Name + ".png"}
                       width="50" />
                   </td>
-                  <td> {index + 1} </td>
+                  <td> {isSortAsc ? index + 1 : scores.length - index} </td>
                   <td> {score.Name} </td>
                   <td> {score.score} </td>
                 </tr>
