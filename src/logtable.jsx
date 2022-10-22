@@ -112,19 +112,22 @@ const get_leaderboard_data = () => {
             <th> Bounty </th>
           </tr>
         </thead>
+
         <tbody>
           {scores &&
             scores.map((score, index) => {
               return (
-                <tr key={score.Name}>
+                <tr valign= "middle" key={score.Name}>
                   <td> 
                     <img
                       src={"https://github.com/" + score.Name + ".png"}
                       width="50" />
                   </td>
-                  <td> {index + 1} </td>
-                  <td> {score.Name} </td>
-                  <td> {score.score} </td>
+                  
+                  <td className="col"> {score.Name} </td>
+                  <td className="col"> {score.score} </td>
+                  <td className="col"> {index + 1} </td>
+            
                 </tr>
               );
             })}

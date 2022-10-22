@@ -7,6 +7,10 @@
   float: right;
 }
 
+.col {
+  align-items: space-evenly;
+  vertical-align: middle;
+}
 
 table.steelBlueCols {
   font-family: Verdana, Geneva, sans-serif;
