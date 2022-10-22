@@ -122,9 +122,9 @@ const get_leaderboard_data = () => {
                       src={"https://github.com/" + score.Name + ".png"}
                       width="50" />
                   </td>
-                  <td> {index + 1} </td>
-                  <td> {score.Name} </td>
-                  <td> {score.score} </td>
+                  <td style={{verticalAlign: "middle"}}> {index + 1} </td>
+                  <td style={{verticalAlign: "middle"}}> {score.Name} </td>
+                  <td style={{verticalAlign: "middle"}}> {score.score} </td>
                 </tr>
               );
             })}

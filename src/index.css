@@ -31,3 +31,11 @@ code {
   margin-bottom: 5%;
   margin-top: 2%
 }
+
+td{
+  vertical-align: center;
+}
+
+.steelBlueCols > td{
+  vertical-align: middle;
+}
