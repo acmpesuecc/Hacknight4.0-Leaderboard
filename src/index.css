@@ -1,33 +1,32 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-html{
+html {
   background-image: url(Grid.png);
-  
 }
-.outerContainer{
+.outerContainer {
   border: 0px;
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.conBtn{
+.conBtn {
   float: left;
   border-style: dashed;
-  border-color: #b5ff3a;
+  border-color: #5eef4b;
   margin-bottom: 5%;
-  margin-top: 2%
+  margin-top: 2%;
 }
 
-.toggleSort{
+.toggleSort {
   border-style: dashed;
-  border-color: #b5ff3a;
+  border-color: #5eef4b;
   margin-bottom: 5%;
-  margin-top: 2%
+  margin-top: 2%;
 }
