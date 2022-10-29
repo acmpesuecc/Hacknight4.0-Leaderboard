@@ -1,12 +1,20 @@
 .App {
   text-align: center;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.1em;
-    background-color:#170F1E;;
-    border: none;
-  
-}    
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.1em;
+  background-color: #170f1e;
+  border: none;
+}
 
+h1 {
+  background: linear-gradient(45deg, #f3ec78, #af4261);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
 
 .App-logo {
   height: 40vmin;
