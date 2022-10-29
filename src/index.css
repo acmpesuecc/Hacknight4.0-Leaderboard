@@ -25,7 +25,7 @@ code {
 }
 
 .toggleSort {
-  border-style: dashed;
+  border-style: dashed solid;
   border-color: #5eef4b;
   margin-bottom: 5%;
   margin-top: 2%;
